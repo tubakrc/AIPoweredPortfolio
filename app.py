@@ -247,7 +247,7 @@ with col1:
                 st.image(proj["image"], use_container_width=True)
                 st.markdown(f"""
                 <div style="
-                    background: linear-gradient(90deg, #ffc719, #f72585);
+                    background: linear-gradient(90deg, #f72585 , #ffc719);
                     border-radius: 10px;
                     padding: 10px 16px;
                     color: #222;
