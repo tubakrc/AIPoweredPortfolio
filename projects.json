@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Weight Wise App",
+    "description": "Estimate obesity levels using multiclass classification machine learning algorithms such as Decision Tree, Knn, Logistic Regression and multiclass methods like \"One-vs-One\" (OvO) ve \"One-vs-Rest\" (OvR).",
+    "tags": ["data science","machine learning", "streamlit", "python", "health", "classification", "health", "wellness-tech"],
+    "type": "streamlit",
+    "link": "https://weightwise.streamlit.app/",
+    "image": "images/WeightWise_Cover.jpg"
+  },
+  {
+    "title": "Datafolio",
+    "description": "Interactive Power BI CV dashboard: Experience, projects and skills.",
+    "tags": ["power bi", "visualization", "portfolio"],
+    "type": "powerbi",
+    "link": "https://app.powerbi.com/view?r=eyJrIjoiNWMxYjJmMWUtZDIzZC00NWUzLTg4MGEtZmIzZTIxZjg1MGVmIiwidCI6Ijc5N2UyNzZjLWY0MWEtNDk0MC1hNTAxLTE4MzQyOGQ2ZTIyZSIsImMiOjl9&embedImagePlaceholder=true",
+    "image": "images/Datafolio_Cover.jpg"
+  },
+    {
+    "title": "Olist E-commerce Dashboard",
+    "description": "The Olist E-commerce Dashboard aims to provide an in-depth analysis of e-commerce data using MS SQL Server for data management and Power BI for visualization. This project covers the end-to-end data pipeline from raw dataset exploration to business insights through interactive reports.",
+    "tags": ["power bi", "visualization", "sales analysis", "sales", "e-commerce application" , "sql" , "churn analysis", "churn"],
+    "type": "powerbi",
+    "link": "https://app.powerbi.com/view?r=eyJrIjoiMWI2YTYwODItNjkyZS00OTU0LThlNWItOTA0N2Y4ZjhhMWE4IiwidCI6Ijc5N2UyNzZjLWY0MWEtNDk0MC1hNTAxLTE4MzQyOGQ2ZTIyZSIsImMiOjl9",
+    "image": "images/Olist_ECommerce_Cover.jpg"
+  },
+  {
+    "title": "New Year's Resolutions Project - Twitter Resolution Analysis",
+    "description": "This project analyzes tweets to explore sentiment, resolution popularity, and trends based on user activity, geography, and demographics.",
+    "tags": ["data science", "python","sentiment analysis", "sentiment", "textual analysis", "new years resolution", "engagement metrics"],
+    "type": "jupyternotebook",
+    "link": "https://github.com/tubakrc/Data_Science_Projects_4",
+    "image": "images/NewYearsResolutions_Cover.jpg"
+  },
+  {
+    "title": "Holiday Events Analysis - Walmart Sales Prediction",
+    "description": "Predicting sales in the retail industry using Machine Learning Algorithms.",
+    "tags": ["data science", "python","factor analysis", "factor" ,"regression", "shap", "holiday season", "sales prediction", "sales", "prediction"],
+    "type": "jupyternotebook",
+    "link": "https://github.com/tubakrc/Data_Science_Projects_3",
+    "image": "images/HolidayEventsAnalysis_Cover.jpg"
+  },
+  {
+    "title": "Credit Card Fraud - Anomaly Detection Project",
+    "description": "Predicting credit card fraud in the banking industry using machine learning algorithms.",
+    "tags": ["data science", "python","anomaly detection", "anomaly", "credit card fraud detection" , "credit card" , "fraud"],
+    "type": "jupyternotebook",
+    "link": "https://github.com/tubakrc/Data_Science_Projects_2",
+    "image": "images/CreditCardFraudDetection_Cover.jpg"
+  },
+  {
+    "title": "Bank Customer Churn Prediction Project",
+    "description": "Predicting customer churn in the banking industry using machine learning algorithms.",
+    "tags": ["data science", "python","classification", "customer churn prediction" , "churn" , "prediction"],
+    "type": "jupyternotebook",
+    "link": "https://github.com/tubakrc/Data_Science_Projects_1",
+    "image": "images/CustomerChurnPrediction_Cover.jpg"
+  }
+]
