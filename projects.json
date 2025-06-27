@@ -24,25 +24,25 @@
     "image": "images/Olist_ECommerce_Cover.jpg"
   },
   {
-    "title": "New Year's Resolutions Project - Twitter Resolution Analysis",
-    "description": "This project analyzes tweets to explore sentiment, resolution popularity, and trends based on user activity, geography, and demographics.",
+    "title": "New Year's Resolutions Project",
+    "description": "Twitter Resolution Analysis: This project analyzes tweets to explore sentiment, resolution popularity, and trends based on user activity, geography, and demographics.",
     "tags": ["data science", "python","sentiment analysis", "sentiment", "textual analysis", "new years resolution", "engagement metrics"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_4",
     "image": "images/NewYearsResolutions_Cover.jpg"
   },
   {
-    "title": "Holiday Events Analysis - Walmart Sales Prediction",
-    "description": "Predicting sales in the retail industry using Machine Learning Algorithms.",
+    "title": "Holiday Events Analysis",
+    "description": "Walmart Sales Prediction: Predicting sales in the retail industry using Machine Learning Algorithms.",
     "tags": ["data science", "python","factor analysis", "factor" ,"regression", "shap", "holiday season", "sales prediction", "sales", "prediction"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_3",
     "image": "images/HolidayEventsAnalysis_Cover.jpg"
   },
   {
-    "title": "Credit Card Fraud - Anomaly Detection Project",
-    "description": "Predicting credit card fraud in the banking industry using machine learning algorithms.",
-    "tags": ["data science", "python","anomaly detection", "anomaly", "credit card fraud detection" , "credit card" , "fraud"],
+    "title": "Credit Card Fraud",
+    "description": "Anomaly Detection Project: Predicting credit card fraud in the banking industry using machine learning algorithms.",
+    "tags": ["data science", "python","anomaly detection", "anomaly", "credit card fraud detection", "credit card", "fraud"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_2",
     "image": "images/CreditCardFraudDetection_Cover.jpg"
