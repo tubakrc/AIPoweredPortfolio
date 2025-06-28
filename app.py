@@ -177,8 +177,6 @@ document.getElementById("muteBtn").addEventListener("click", () => {{
 """, height=0)
 
 
-
-
 GOOGLE_API_KEY = (os.getenv('GOOGLE_API_KEY') or st.secrets.get("GOOGLE_API_KEY"))
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash-latest")
