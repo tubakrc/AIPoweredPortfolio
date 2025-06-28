@@ -8,89 +8,11 @@ from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 import uuid
 from fuzzywuzzy import fuzz
+import streamlit as st
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title="AI-Powered Data Science Portfolio", layout="wide")
 
-
-st.markdown("""
-<style>
-/* Main Title */
-h1 {
-    font-size: 52px !important;
-    font-weight: 800 !important;
-}
-
-/* Section Headings (e.g. st.markdown(\"### ...\")) */
-h3 {
-    font-size: 36px !important;
-    font-weight: 600 !important;
-}
-
-/* TextInput label and input text */
-label, .stTextInput label {
-    font-size: 28px !important;
-    font-weight: bold !important;
-}
-.stTextInput input {
-    font-size: 18px !important;
-}
-
-/* SelectBox */
-.stSelectbox label {
-    font-size: 28px !important;
-    font-weight: bold !important;
-}
-.css-1wa3eu0-placeholder {  /* dropdown placeholder */
-    font-size: 18px !important;
-}
-.css-1uccc91-singleValue {  /* selected value */
-    font-size: 18px !important;
-}
-
-/* Buttons */
-.stButton button {
-    font-size: 18px !important;
-    padding: 8px 16px;
-    font-weight: bold;
-}
-
-/* Markdown paragraph custom */
-p.main-text {
-    font-size: 22px !important;
-    font-weight: 600;
-    color: #444;
-}
-
-/* Rating section note */
-.rating-tooltip {
-    font-size: 16px;
-    font-style: italic;
-    color: #999;
-}
-.ai-idea-frame {
-    background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20% );
-    border-radius: 16px;
-    padding: 20px;
-    margin-top: 30px;
-    box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
-    color: white;
-    font-weight: 600;
-    border: 3px solid #fff;
-}
-.ai-idea-frame h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-.ai-idea-frame p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-</style>
-""", unsafe_allow_html=True)
-
-
-import streamlit as st
-import streamlit.components.v1 as components
 
 # Background tracks
 background_tracks = [
@@ -184,6 +106,85 @@ window.addEventListener('load', () => {{
 }});
 </script>
 """, height=0)
+
+
+st.markdown("""
+<style>
+/* Main Title */
+h1 {
+    font-size: 52px !important;
+    font-weight: 800 !important;
+}
+
+/* Section Headings (e.g. st.markdown(\"### ...\")) */
+h3 {
+    font-size: 36px !important;
+    font-weight: 600 !important;
+}
+
+/* TextInput label and input text */
+label, .stTextInput label {
+    font-size: 28px !important;
+    font-weight: bold !important;
+}
+.stTextInput input {
+    font-size: 18px !important;
+}
+
+/* SelectBox */
+.stSelectbox label {
+    font-size: 28px !important;
+    font-weight: bold !important;
+}
+.css-1wa3eu0-placeholder {  /* dropdown placeholder */
+    font-size: 18px !important;
+}
+.css-1uccc91-singleValue {  /* selected value */
+    font-size: 18px !important;
+}
+
+/* Buttons */
+.stButton button {
+    font-size: 18px !important;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+/* Markdown paragraph custom */
+p.main-text {
+    font-size: 22px !important;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Rating section note */
+.rating-tooltip {
+    font-size: 16px;
+    font-style: italic;
+    color: #999;
+}
+.ai-idea-frame {
+    background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20% );
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+    color: white;
+    font-weight: 600;
+    border: 3px solid #fff;
+}
+.ai-idea-frame h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.ai-idea-frame p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 
 
 GOOGLE_API_KEY = (os.getenv('GOOGLE_API_KEY') or st.secrets.get("GOOGLE_API_KEY"))
