@@ -92,27 +92,24 @@ p.main-text {
 import streamlit as st
 import streamlit.components.v1 as components
 
+# Background tracks
 background_tracks = [
     "https://www.bensound.com/bensound-music/bensound-slowmotion.mp3",
     "https://www.bensound.com/bensound-music/bensound-goinghigher.mp3",
     "https://www.bensound.com/bensound-music/bensound-sweet.mp3"
 ]
 
+# Build JS playlist array
 playlist_js = "[" + ", ".join(f'"{url}"' for url in background_tracks) + "]"
 
 components.html(f"""
-<div style="
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-">
-    <button id="muteBtn" title="Toggle background music" style="
-        font-size: 28px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-    ">🔇</button>
+<div id="audio-player-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+  <button id="muteBtn" title="Toggle background music" style="
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  ">🔇</button>
 </div>
 
 <script>
@@ -138,7 +135,7 @@ function fadeOut(audioEl, duration = 2000) {{
 
 function fadeIn(audioEl, targetVolume = 0.25, duration = 2000) {{
     audioEl.volume = 0;
-    audioEl.play().catch(err => console.log("Play blocked:", err));
+    audioEl.play().catch(err => console.log("Autoplay blocked:", err));
     let step = targetVolume / (duration / 100);
     let fadeInterval = setInterval(() => {{
         if (audioEl.volume + step < targetVolume) {{
@@ -166,12 +163,24 @@ document.getElementById("muteBtn").addEventListener("click", () => {{
             isPlaying = true;
             document.getElementById("muteBtn").innerText = "🔊";
         }}).catch(err => {{
-            console.log("Autoplay blocked:", err);
+            console.log("Autoplay blocked until user interacts");
         }});
     }} else {{
         audio.muted = !audio.muted;
         document.getElementById("muteBtn").innerText = audio.muted ? "🔇" : "🔊";
     }}
+}});
+
+// Try to autoplay after page load (may still be blocked until user clicks)
+window.addEventListener('load', () => {{
+    setTimeout(() => {{
+        audio.play().then(() => {{
+            isPlaying = true;
+            document.getElementById("muteBtn").innerText = "🔊";
+        }}).catch(err => {{
+            console.log("Autoplay blocked, waiting for click.");
+        }});
+    }}, 800);
 }});
 </script>
 """, height=0)
