@@ -68,7 +68,7 @@ p.main-text {
     color: #999;
 }
 .ai-idea-frame {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #2575fc 70%, #6a11cb 30% );
     border-radius: 16px;
     padding: 20px;
     margin-top: 30px;
