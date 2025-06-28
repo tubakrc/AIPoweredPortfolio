@@ -2,7 +2,7 @@
   {
     "title": "Weight Wise App",
     "description": "Estimate obesity levels using multiclass classification machine learning algorithms such as Decision Tree, Knn, Logistic Regression and multiclass methods like \"One-vs-One\" (OvO) ve \"One-vs-Rest\" (OvR).",
-    "tags": ["data science","machine learning", "streamlit", "python", "health", "classification", "health", "wellness-tech"],
+    "tags": ["data science", "machine learning", "ml", "streamlit", "python", "health", "classification", "health", "wellness-tech"],
     "type": "streamlit",
     "link": "https://weightwise.streamlit.app/",
     "image": "images/WeightWise_Cover.jpg"
@@ -26,7 +26,7 @@
   {
     "title": "New Year's Resolutions Project",
     "description": "Twitter Resolution Analysis: This project analyzes tweets to explore sentiment, resolution popularity, and trends based on user activity, geography, and demographics.",
-    "tags": ["data science", "python","sentiment analysis", "sentiment", "textual analysis", "new years resolution", "engagement metrics"],
+    "tags": ["data science", "python", "sentiment analysis", "machine learning", "ml", "sentiment", "textual analysis", "new years resolution", "engagement metrics"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_4",
     "image": "images/NewYearsResolutions_Cover.jpg"
@@ -34,7 +34,7 @@
   {
     "title": "Holiday Events Analysis",
     "description": "Walmart Sales Prediction: Predicting sales in the retail industry using Machine Learning Algorithms.",
-    "tags": ["data science", "python","factor analysis", "factor" ,"regression", "shap", "holiday season", "sales prediction", "sales", "prediction"],
+    "tags": ["data science", "python", "machine learning", "ml", "factor analysis", "factor", "regression", "shap", "holiday season", "sales prediction", "sales", "prediction"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_3",
     "image": "images/HolidayEventsAnalysis_Cover.jpg"
@@ -42,7 +42,7 @@
   {
     "title": "Credit Card Fraud",
     "description": "Anomaly Detection Project: Predicting credit card fraud in the banking industry using machine learning algorithms.",
-    "tags": ["data science", "python","anomaly detection", "anomaly", "credit card fraud detection", "credit card", "fraud"],
+    "tags": ["data science", "python", "machine learning", "ml", "anomaly detection", "anomaly", "credit card fraud detection", "credit card", "fraud"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_2",
     "image": "images/CreditCardFraudDetection_Cover.jpg"
@@ -50,7 +50,7 @@
   {
     "title": "Bank Customer Churn Prediction Project",
     "description": "Predicting customer churn in the banking industry using machine learning algorithms.",
-    "tags": ["data science", "python","classification", "customer churn prediction" , "churn" , "prediction"],
+    "tags": ["data science", "python", "machine learning", "ml","classification", "customer churn prediction", "churn", "prediction"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_1",
     "image": "images/CustomerChurnPrediction_Cover.jpg"
