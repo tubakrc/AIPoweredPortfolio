@@ -98,72 +98,9 @@ background_tracks = [
     "https://www.bensound.com/bensound-music/bensound-sweet.mp3"
 ]
 
+playlist_js = "[" + ", ".join(f'"{url}"' for url in background_tracks) + "]"
 
-if "bg_audio_muted" not in st.session_state:
-    st.session_state.bg_audio_muted = False
-if "toggle_audio" not in st.session_state:
-    st.session_state.toggle_audio = False
-
-# Top-right floating mute/unmute button with unique key and CSS
-st.markdown("""
-    <style>
-    #mute-btn-container {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 9999;
-    }
-    #mute-btn-container button {
-        font-size: 24px;
-        padding: 0.5em 0.7em;
-        cursor: pointer;
-    }
-    </style>
-    <div id="mute-btn-container">
-    """, unsafe_allow_html=True)
-
-if st.button("🔇" if not st.session_state.bg_audio_muted else "🔊", key="mute_toggle_btn"):
-    st.session_state.bg_audio_muted = not st.session_state.bg_audio_muted
-    st.session_state.toggle_audio = True
-
-st.markdown("</div>", unsafe_allow_html=True)
-
-def embed_audio_playlist(track_urls, muted, trigger_toggle):
-    js_tracks = "[" + ", ".join(f'"{url}"' for url in track_urls) + "]"
-    toggle_script = (
-        f"window.audio.muted = {str(muted).lower()};"
-        f"window.audio.volume = 0.25;"
-        f"if(!{str(muted).lower()}) window.audio.play();"
-        if trigger_toggle else ""
-    )
-
-    html = f"""
-    <script>
-    const tracks = {js_tracks};
-    let current = 0;
-
-    if (!window.audio) {{
-        window.audio = new Audio(tracks[current]);
-        window.audio.volume = 0.25;
-        window.audio.muted = {str(muted).lower()};
-        window.audio.play();
-
-        window.audio.addEventListener('ended', () => {{
-            current = (current + 1) % tracks.length;
-            window.audio.src = tracks[current];
-            window.audio.play();
-        }});
-
-        window.streamlitAudio = {{
-            mute: () => {{ window.audio.muted = true; window.audio.pause(); }},
-            unmute: () => {{ window.audio.muted = false; window.audio.play(); }}
-        }};
-    }}
-
-    {toggle_script}
-    </script>
-    """
-    components.html(f"""
+components.html(f"""
 <div style="
     position: fixed;
     top: 20px;
@@ -183,7 +120,7 @@ const tracks = {playlist_js};
 let current = 0;
 let audio = new Audio(tracks[current]);
 audio.volume = 0.25;
-audio.muted = true;  // ✅ start muted for autoplay safety
+audio.muted = true;
 let isPlaying = false;
 
 function fadeOut(audioEl, duration = 2000) {{
@@ -229,7 +166,7 @@ document.getElementById("muteBtn").addEventListener("click", () => {{
             isPlaying = true;
             document.getElementById("muteBtn").innerText = "🔊";
         }}).catch(err => {{
-            console.log("Autoplay error:", err);
+            console.log("Autoplay blocked:", err);
         }});
     }} else {{
         audio.muted = !audio.muted;
@@ -238,9 +175,6 @@ document.getElementById("muteBtn").addEventListener("click", () => {{
 }});
 </script>
 """, height=0)
-
-embed_audio_playlist(background_tracks, st.session_state.bg_audio_muted, st.session_state.toggle_audio)
-st.session_state.toggle_audio = False
 
 
 
