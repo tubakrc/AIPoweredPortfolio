@@ -25,7 +25,7 @@ components.html(f"""
 <div style="
     position: fixed;
     top: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 9999;
 ">
     <button id="muteBtn" style="
