@@ -14,23 +14,24 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="AI-Powered Data Science Portfolio", layout="wide")
 
 
-# Background tracks
 background_tracks = [
     "https://www.bensound.com/bensound-music/bensound-slowmotion.mp3",
     "https://www.bensound.com/bensound-music/bensound-goinghigher.mp3",
     "https://www.bensound.com/bensound-music/bensound-sweet.mp3"
 ]
 
-# Build JS playlist array
 playlist_js = "[" + ", ".join(f'"{url}"' for url in background_tracks) + "]"
 
 components.html(f"""
-<div id="audio-player-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-  <button id="muteBtn" title="Toggle background music" style="
-    font-size: 28px;
-    background: transparent;
-    border: none;
+<div id="audio-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+  <button id="muteBtn" title="Toggle music" style="
+    font-size: 26px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: #ffffffcc;
+    border: 1px solid #ccc;
     cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
   ">🔇</button>
 </div>
 
@@ -85,7 +86,7 @@ document.getElementById("muteBtn").addEventListener("click", () => {{
             isPlaying = true;
             document.getElementById("muteBtn").innerText = "🔊";
         }}).catch(err => {{
-            console.log("Autoplay blocked until user interacts");
+            console.log("Autoplay blocked until interaction");
         }});
     }} else {{
         audio.muted = !audio.muted;
@@ -93,20 +94,19 @@ document.getElementById("muteBtn").addEventListener("click", () => {{
     }}
 }});
 
-// Try to autoplay after page load (may still be blocked until user clicks)
+// Ensure autoplay attempt on load
 window.addEventListener('load', () => {{
     setTimeout(() => {{
         audio.play().then(() => {{
             isPlaying = true;
             document.getElementById("muteBtn").innerText = "🔊";
         }}).catch(err => {{
-            console.log("Autoplay blocked, waiting for click.");
+            console.log("Waiting for interaction");
         }});
     }}, 800);
 }});
 </script>
 """, height=0)
-
 
 st.markdown("""
 <style>
