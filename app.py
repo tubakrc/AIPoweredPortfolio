@@ -18,7 +18,8 @@ st.set_page_config(page_title="AI-Powered Data Science Portfolio", layout="wide"
 background_tracks = [
     "https://www.bensound.com/bensound-music/bensound-sweet.mp3",
     "https://www.bensound.com/bensound-music/bensound-slowmotion.mp3",
-    "https://www.bensound.com/bensound-music/bensound-goinghigher.mp3"
+    "https://www.bensound.com/bensound-music/bensound-goinghigher.mp3",
+    "https://www.bensound.com/bensound-music/bensound-floatinggarden.mp3"
 ]
 playlist_js = "[" + ", ".join(f'\"{url}\"' for url in background_tracks) + "]"
 components.html(f"""
