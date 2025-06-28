@@ -18,7 +18,7 @@
     {
     "title": "Olist E-commerce Dashboard",
     "description": "The Olist E-commerce Dashboard aims to provide an in-depth analysis of e-commerce data using MS SQL Server for data management and Power BI for visualization. This project covers the end-to-end data pipeline from raw dataset exploration to business insights through interactive reports.",
-    "tags": ["power bi", "visualization", "sales analysis", "sales", "e-commerce application" , "sql" , "churn analysis", "churn"],
+    "tags": ["power bi", "visualization", "sales analysis", "sales", "e-commerce application", "sql", "t-sql", "churn analysis", "churn"],
     "type": "powerbi",
     "link": "https://app.powerbi.com/view?r=eyJrIjoiMWI2YTYwODItNjkyZS00OTU0LThlNWItOTA0N2Y4ZjhhMWE4IiwidCI6Ijc5N2UyNzZjLWY0MWEtNDk0MC1hNTAxLTE4MzQyOGQ2ZTIyZSIsImMiOjl9",
     "image": "images/Olist_ECommerce_Cover.jpg"
@@ -48,9 +48,9 @@
     "image": "images/CreditCardFraudDetection_Cover.jpg"
   },
   {
-    "title": "Bank Customer Churn Prediction Project",
+    "title": "Bank Customer Churn Prediction",
     "description": "Predicting customer churn in the banking industry using machine learning algorithms.",
-    "tags": ["data science", "python", "machine learning", "ml","classification", "customer churn prediction", "churn", "prediction"],
+    "tags": ["data science", "python", "machine learning", "ml", "classification", "customer churn prediction", "churn", "prediction"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_1",
     "image": "images/CustomerChurnPrediction_Cover.jpg"
