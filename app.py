@@ -14,34 +14,33 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="AI-Powered Data Science Portfolio", layout="wide")
 
 
+# 🔊 Background Audio with Mute/Unmute Button (Top-Right)
 background_tracks = [
+    "https://www.bensound.com/bensound-music/bensound-sweet.mp3",
     "https://www.bensound.com/bensound-music/bensound-slowmotion.mp3",
-    "https://www.bensound.com/bensound-music/bensound-goinghigher.mp3",
-    "https://www.bensound.com/bensound-music/bensound-sweet.mp3"
+    "https://www.bensound.com/bensound-music/bensound-goinghigher.mp3"
 ]
-
-playlist_js = "[" + ", ".join(f'"{url}"' for url in background_tracks) + "]"
-
+playlist_js = "[" + ", ".join(f'\"{url}\"' for url in background_tracks) + "]"
 components.html(f"""
-<div id="audio-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-  <button id="muteBtn" title="Toggle music" style="
-    font-size: 26px;
-    padding: 6px 10px;
-    border-radius: 8px;
-    background-color: #ffffffcc;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-  ">🔇</button>
+<div style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+">
+    <button id="muteBtn" style="
+        font-size: 28px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    ">🔊</button>
 </div>
-
 <script>
 const tracks = {playlist_js};
 let current = 0;
 let audio = new Audio(tracks[current]);
 audio.volume = 0.25;
-audio.muted = true;
-let isPlaying = false;
+audio.muted = false;
 
 function fadeOut(audioEl, duration = 2000) {{
     let step = audioEl.volume / (duration / 100);
@@ -58,7 +57,7 @@ function fadeOut(audioEl, duration = 2000) {{
 
 function fadeIn(audioEl, targetVolume = 0.25, duration = 2000) {{
     audioEl.volume = 0;
-    audioEl.play().catch(err => console.log("Autoplay blocked:", err));
+    audioEl.play();
     let step = targetVolume / (duration / 100);
     let fadeInterval = setInterval(() => {{
         if (audioEl.volume + step < targetVolume) {{
@@ -80,31 +79,15 @@ audio.addEventListener('ended', () => {{
 }});
 
 document.getElementById("muteBtn").addEventListener("click", () => {{
-    if (!isPlaying) {{
-        audio.muted = false;
-        audio.play().then(() => {{
-            isPlaying = true;
-            document.getElementById("muteBtn").innerText = "🔊";
-        }}).catch(err => {{
-            console.log("Autoplay blocked until interaction");
-        }});
-    }} else {{
-        audio.muted = !audio.muted;
-        document.getElementById("muteBtn").innerText = audio.muted ? "🔇" : "🔊";
-    }}
+    audio.muted = !audio.muted;
+    document.getElementById("muteBtn").innerText = audio.muted ? "🔇" : "🔊";
 }});
 
-// Ensure autoplay attempt on load
-window.addEventListener('load', () => {{
+window.onload = () => {{
     setTimeout(() => {{
-        audio.play().then(() => {{
-            isPlaying = true;
-            document.getElementById("muteBtn").innerText = "🔊";
-        }}).catch(err => {{
-            console.log("Waiting for interaction");
-        }});
-    }}, 800);
-}});
+        audio.play();
+    }}, 500);
+}};
 </script>
 """, height=0)
 
