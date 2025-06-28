@@ -163,7 +163,81 @@ def embed_audio_playlist(track_urls, muted, trigger_toggle):
     {toggle_script}
     </script>
     """
-    components.html(html, height=0)
+    components.html(f"""
+<div style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+">
+    <button id="muteBtn" title="Toggle background music" style="
+        font-size: 28px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    ">🔇</button>
+</div>
+
+<script>
+const tracks = {playlist_js};
+let current = 0;
+let audio = new Audio(tracks[current]);
+audio.volume = 0.25;
+audio.muted = true;  // ✅ start muted for autoplay safety
+let isPlaying = false;
+
+function fadeOut(audioEl, duration = 2000) {{
+    let step = audioEl.volume / (duration / 100);
+    let fadeInterval = setInterval(() => {{
+        if (audioEl.volume - step > 0) {{
+            audioEl.volume -= step;
+        }} else {{
+            clearInterval(fadeInterval);
+            audioEl.volume = 0;
+            audioEl.pause();
+        }}
+    }}, 100);
+}}
+
+function fadeIn(audioEl, targetVolume = 0.25, duration = 2000) {{
+    audioEl.volume = 0;
+    audioEl.play().catch(err => console.log("Play blocked:", err));
+    let step = targetVolume / (duration / 100);
+    let fadeInterval = setInterval(() => {{
+        if (audioEl.volume + step < targetVolume) {{
+            audioEl.volume += step;
+        }} else {{
+            clearInterval(fadeInterval);
+            audioEl.volume = targetVolume;
+        }}
+    }}, 100);
+}}
+
+audio.addEventListener('ended', () => {{
+    fadeOut(audio, 2000);
+    setTimeout(() => {{
+        current = (current + 1) % tracks.length;
+        audio.src = tracks[current];
+        fadeIn(audio, 0.25, 2000);
+    }}, 2200);
+}});
+
+document.getElementById("muteBtn").addEventListener("click", () => {{
+    if (!isPlaying) {{
+        audio.muted = false;
+        audio.play().then(() => {{
+            isPlaying = true;
+            document.getElementById("muteBtn").innerText = "🔊";
+        }}).catch(err => {{
+            console.log("Autoplay error:", err);
+        }});
+    }} else {{
+        audio.muted = !audio.muted;
+        document.getElementById("muteBtn").innerText = audio.muted ? "🔇" : "🔊";
+    }}
+}});
+</script>
+""", height=0)
 
 embed_audio_playlist(background_tracks, st.session_state.bg_audio_muted, st.session_state.toggle_audio)
 st.session_state.toggle_audio = False
