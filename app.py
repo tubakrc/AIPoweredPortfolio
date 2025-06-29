@@ -150,7 +150,7 @@ p.main-text {
 /* Container box */
 .ai-idea-frame {
     width: 100%;
-    max-width: 977px;
+    max-width: 990px;
     background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20%);
     border-radius: 16px;
     padding: 20px;
@@ -349,7 +349,6 @@ with col1:
                 st.markdown(f"""
                 <div style="
                     width: 100%;
-                    max-width: 977px;
                     background: linear-gradient(90deg, #ffc719, #f72585);
                     border-radius: 10px;
                     padding: 10px 16px;
