@@ -167,7 +167,7 @@ p.main-text {
     margin-bottom: 15px;
 }
 .ai-idea-frame input {
-    width: 100%;
+    width: 977px;
     padding: 12px;
     border-radius: 10px;
     border: none;
