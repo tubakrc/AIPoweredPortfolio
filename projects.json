@@ -2,7 +2,7 @@
   {
     "title": "Weight Wise App",
     "description": "Estimate obesity levels using multiclass classification algorithms such as Decision Tree, KNN, and Logistic Regression, along with multiclass strategies like One-vs-One (OvO) and One-vs-Rest (OvR). Additionally, meal and alternative meal recommendations are provided using a Content-Based Filtering with Nutritional Similarity algorithm based on the individual's diet type and cuisine preferences. ",
-    "tags": ["data science", "machine learning", "ml", "streamlit", "python", "health", "classification", "health", "wellness-tech", "multiclass", "Content-Based", "Similarity"],
+    "tags": ["data science", "machine learning", "ml", "streamlit", "python", "health", "classification", "health", "wellness-tech", "multiclass", "content-based", "similarity"],
     "type": "streamlit",
     "link": "https://weightwise.streamlit.app/",
     "image": "images/WeightWise_Cover.jpg"
