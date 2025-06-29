@@ -147,12 +147,29 @@ p.main-text {
     font-style: italic;
     color: #999;
 }
-/* Text input'un container'ını hedefle */
-div[data-testid="stTextInput"] {
-    width: 977px !important;
+/* Container box */
+.ai-idea-frame {
+    width: 100%;
+    max-width: 977px;
+    background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20%);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+    color: white;
+    font-weight: 600;
+    border: 3px solid #fff;
+    box-sizing: border-box;
 }
 
-/* Text input içindeki gerçek input alanı */
+/* Streamlit text input container */
+div[data-testid="stTextInput"] {
+    width: 100% !important;
+    max-width: 977px;
+    box-sizing: border-box;
+}
+
+/* Streamlit actual input field */
 div[data-testid="stTextInput"] input {
     width: 100% !important;
     padding: 12px;
@@ -162,33 +179,14 @@ div[data-testid="stTextInput"] input {
     box-sizing: border-box;
     margin-top: 10px;
 }
-.ai-idea-frame {
-    width: 977px;
-    background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20% );
-    border-radius: 16px;
-    padding: 20px;
-    margin-top: 30px;
-    box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
-    color: white;
-    font-weight: 600;
-    border: 3px solid #fff;
-}
-.ai-idea-frame h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-.ai-idea-frame p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-.ai-idea-frame input {
-    width: 977px;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-    box-sizing: border-box;
-    margin-top: 10px;
+@media (max-width: 600px) {
+    .ai-idea-frame {
+        padding: 16px;
+    }
+
+    div[data-testid="stTextInput"] input {
+        font-size: 14px;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
