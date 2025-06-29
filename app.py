@@ -96,7 +96,7 @@ st.markdown("""
 <style>
 /* Main Title */
 h1 {
-    font-size: 52px !important;
+    font-size: 48px !important;
     font-weight: 800 !important;
 }
 
