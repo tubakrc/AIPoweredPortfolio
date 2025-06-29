@@ -150,7 +150,7 @@ p.main-text {
 /* Container box */
 .ai-idea-frame {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1005px;
     background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20%);
     border-radius: 16px;
     padding: 20px;
