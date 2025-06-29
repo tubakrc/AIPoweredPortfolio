@@ -166,6 +166,15 @@ p.main-text {
     font-size: 18px;
     margin-bottom: 15px;
 }
+.ai-idea-frame input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
 </style>
 """, unsafe_allow_html=True)
 
