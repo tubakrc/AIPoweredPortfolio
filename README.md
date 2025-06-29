@@ -12,7 +12,7 @@ An interactive Streamlit application that showcases Data Science projects and Po
 - 🧠 **AI-Assisted Tag Extraction**  
   Gemini generates topic tags from user queries to improve content matching.
 
-- 🧠 ** Fuzzy Matching**  
+- 🧠 **Fuzzy Matching**  
   Improved relevance across titles, tags, and descriptions
 
 - 💡 **Project Idea Generator**  
@@ -27,7 +27,7 @@ An interactive Streamlit application that showcases Data Science projects and Po
 - 📊 **Google Sheets Integration**  
   Ratings and favorite selections are logged anonymously to support continuous improvement.
 
-- 🔐 ** User-Centered Design**  
+- 🔐 **User-Centered Design**  
   Anonymous session info is used to fine-tune the app and adapt features to real user needs over time.
 
 - 📱 **Responsive UI**  
