@@ -263,10 +263,23 @@ def extract_topics_from_text(user_text):
     User message: "{user_text}"
     Tags:
     """
-    response = model.generate_content(prompt)
-    tags_text = response.text.strip()
-    tags = [tag.strip().lower() for tag in tags_text.split(",")]
-    return tags
+
+    try:
+        response = model.generate_content(prompt)
+        tags_text = response.text.strip()
+
+        if not tags_text:
+            st.warning("The AI did not return any tags. Please try again.")
+            return []
+
+        tags = [tag.strip().lower() for tag in tags_text.split(",") if tag.strip()]
+        return tags
+
+    except Exception as e:
+        st.error("⚠️ Could not extract topics due to an AI service error. Please try again later.")
+        # Uncomment the next line for debugging
+        # st.exception(e)
+        return []
 
 def get_categories(projects):
     categories = set()
