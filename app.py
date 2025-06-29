@@ -414,9 +414,25 @@ st.markdown("""
 project_goal = st.text_input("💡 What would you like to explore through your next project? ")
 
 if st.button("Suggest a Project Idea") and project_goal:
-    suggest_prompt = f"Suggest a unique, realistic and creative data science project idea based on this interest: '{project_goal}'. Return only 1 idea with a short title and description."
-    response = model.generate_content(suggest_prompt)
-    st.success(response.text.strip())
+    suggest_prompt = (
+        f"Suggest a unique, realistic, and creative data science project idea based on this interest: "
+        f"'{project_goal}'. Return only 1 idea with a short title and description."
+    )
+    
+    try:
+        response = model.generate_content(suggest_prompt)
+        idea_text = response.text.strip()
+
+        if idea_text:
+            st.success(idea_text)
+        else:
+            st.warning("The AI returned an empty response. Try rephrasing your topic.")
+    
+    except Exception as e:
+        st.error("⚠️ AI usage limit reached or an error occurred. Please try again later.")
+        # Uncomment below for debugging during development:
+        # st.exception(e)
+        st.stop()
 
 st.markdown("</div>", unsafe_allow_html=True)
 
