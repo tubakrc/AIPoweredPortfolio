@@ -147,6 +147,21 @@ p.main-text {
     font-style: italic;
     color: #999;
 }
+/* Text input'un container'ını hedefle */
+div[data-testid="stTextInput"] {
+    width: 977px !important;
+}
+
+/* Text input içindeki gerçek input alanı */
+div[data-testid="stTextInput"] input {
+    width: 100% !important;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
 .ai-idea-frame {
     width: 977px;
     background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20% );
@@ -398,8 +413,8 @@ st.markdown("""
     <h2>🤖 Ask AI for Project Ideas</h2>
     <p>Let AI inspire your next data science project. Enter an area of interest and get a custom idea:</p>
 """, unsafe_allow_html=True)
+project_goal = st.text_input("💡 What area are you interested in developing a project for?", label_visibility="collapsed")
 
-project_goal = st.text_input("💡 What area are you interested in developing a project for?")
 if st.button("Suggest a Project Idea") and project_goal:
     suggest_prompt = f"Suggest a unique, realistic and creative data science project idea based on this interest: '{project_goal}'. Return only 1 idea with a short title and description."
     response = model.generate_content(suggest_prompt)
