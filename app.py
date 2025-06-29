@@ -11,7 +11,7 @@ from fuzzywuzzy import fuzz
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.set_page_config(page_title="AI-Powered Data Science Portfolio", layout="wide")
+st.set_page_config(page_title="AI-Powered Portfolio", layout="wide")
 
 
 # 🔊 Background Audio with Mute/Unmute Button (Top-Right)
