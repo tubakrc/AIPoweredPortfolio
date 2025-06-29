@@ -1,16 +1,16 @@
 [
   {
     "title": "Weight Wise App",
-    "description": "Estimate obesity levels using multiclass classification machine learning algorithms such as Decision Tree, Knn, Logistic Regression and multiclass methods like \"One-vs-One\" (OvO) ve \"One-vs-Rest\" (OvR).",
-    "tags": ["data science", "machine learning", "ml", "streamlit", "python", "health", "classification", "health", "wellness-tech"],
+    "description": "Estimate obesity levels using multiclass classification algorithms such as Decision Tree, KNN, and Logistic Regression, along with multiclass strategies like One-vs-One (OvO) and One-vs-Rest (OvR).",
+    "tags": ["data science", "machine learning", "ml", "streamlit", "python", "health", "classification", "health", "wellness-tech", "multiclass"],
     "type": "streamlit",
     "link": "https://weightwise.streamlit.app/",
     "image": "images/WeightWise_Cover.jpg"
   },
   {
     "title": "Datafolio",
-    "description": "Interactive Power BI CV dashboard: Experience, projects and skills.",
-    "tags": ["power bi", "visualization", "portfolio"],
+    "description": "Interactive Power BI Resume dashboard: Experience, projects and skills.",
+    "tags": ["power bi", "visualization", "portfolio", "cv", "resume" ],
     "type": "powerbi",
     "link": "https://app.powerbi.com/view?r=eyJrIjoiNWMxYjJmMWUtZDIzZC00NWUzLTg4MGEtZmIzZTIxZjg1MGVmIiwidCI6Ijc5N2UyNzZjLWY0MWEtNDk0MC1hNTAxLTE4MzQyOGQ2ZTIyZSIsImMiOjl9&embedImagePlaceholder=true",
     "image": "images/Datafolio_Cover.jpg"
@@ -41,7 +41,7 @@
   },
   {
     "title": "Credit Card Fraud",
-    "description": "Anomaly Detection Project: Predicting credit card fraud in the banking industry using machine learning algorithms.",
+    "description": "Anomaly Detection Project: Predicting credit card fraud in the banking industry using Machine Learning Algorithms.",
     "tags": ["data science", "python", "machine learning", "ml", "anomaly detection", "anomaly", "credit card fraud detection", "credit card", "fraud"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_2",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Bank Customer Churn Prediction",
-    "description": "Predicting customer churn in the banking industry using machine learning algorithms.",
+    "description": "Predicting customer churn in the banking industry using Machine Learning Algorithms.",
     "tags": ["data science", "python", "machine learning", "ml", "classification", "customer churn prediction", "churn", "prediction"],
     "type": "jupyternotebook",
     "link": "https://github.com/tubakrc/Data_Science_Projects_1",
