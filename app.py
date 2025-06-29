@@ -148,7 +148,7 @@ p.main-text {
     color: #999;
 }
 .ai-idea-frame {
-    width: 900px;
+    width: 1000px;
     background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20% );
     border-radius: 16px;
     padding: 20px;
@@ -326,7 +326,7 @@ with col1:
                 st.image(proj["image"], use_container_width=True)
                 st.markdown(f"""
                 <div style="
-                    width: 900px;
+                    width: 1000px;
                     background: linear-gradient(90deg, #ffc719, #f72585);
                     border-radius: 10px;
                     padding: 10px 16px;
