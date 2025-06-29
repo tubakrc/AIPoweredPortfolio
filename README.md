@@ -1,4 +1,4 @@
-# 🎯 AI-Powered Data Science & Power BI Portfolio App
+# 🎯 AI-Powered Portfolio App
 
 An interactive Streamlit application that showcases Data Science projects and Power BI dashboards — personalized with the help of Google Gemini and enhanced with real-time user feedback and categorization tools.
 
