@@ -349,6 +349,7 @@ with col1:
                 st.markdown(f"""
                 <div style="
                     width: 100%;
+                    max-width: 977px;
                     background: linear-gradient(90deg, #ffc719, #f72585);
                     border-radius: 10px;
                     padding: 10px 16px;
