@@ -150,7 +150,7 @@ p.main-text {
 /* Container box */
 .ai-idea-frame {
     width: 100%;
-    max-width: 1005px;
+    max-width: 1010px;
     background: linear-gradient(135deg, #2575fc 80%, #6a11cb 20%);
     border-radius: 16px;
     padding: 20px;
@@ -165,7 +165,7 @@ p.main-text {
 /* Streamlit text input container */
 div[data-testid="stTextInput"] {
     width: 100% !important;
-    max-width: 977px;
+    max-width: 1010px;
     box-sizing: border-box;
 }
 
