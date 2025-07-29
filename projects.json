@@ -8,6 +8,14 @@
     "image": "images/WeightWise_Cover.jpg"
   },
   {
+    "title": "AI Research Assistant",
+    "description": "AI Research Assistant is a smart, Streamlit-based app that uses AI agents to search the web (DuckDuckGo, Wikipedia), summarize findings, and export the results to a downloadable file.",
+    "tags": ["python", "AI Agents", "Research", "search", "streamlit" ],
+    "type": "streamlit",
+    "link": "https://ai-research-assistant25.streamlit.app/",
+    "image": "images/AIResearchAssistant_Cover.jpg"
+  },
+ {
     "title": "Datafolio",
     "description": "Interactive Power BI Resume Dashboard: Experience, projects and skills.",
     "tags": ["power bi", "visualization", "portfolio", "cv", "resume" ],
