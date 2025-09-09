@@ -10,7 +10,7 @@
   {
     "title": "AI Research Assistant",
     "description": "AI Research Assistant is a smart, Streamlit-based app that uses AI agents to search the web (DuckDuckGo, Wikipedia), summarize findings, and export the results to a downloadable file.",
-    "tags": ["python", "AI Agents", "Research", "search", "streamlit" ],
+    "tags": ["python", "AI Agents", "research", "search", "streamlit" ],
     "type": "streamlit",
     "link": "https://ai-research-assistant25.streamlit.app/",
     "image": "images/AIResearchAssistant_Cover.jpg"
@@ -64,3 +64,4 @@
     "image": "images/CustomerChurnPrediction_Cover.jpg"
   }
 ]
+
