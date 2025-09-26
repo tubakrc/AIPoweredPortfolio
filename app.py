@@ -196,7 +196,7 @@ div[data-testid="stTextInput"] input {
 
 GOOGLE_API_KEY = (os.getenv('GOOGLE_API_KEY') or st.secrets.get("GOOGLE_API_KEY"))
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel("gemini-1.5-flash-latest")
+model = genai.GenerativeModel("gemini-2.5-pro")
 
 
 SHEET_NAME = "Portfolio_Interactions"
@@ -461,3 +461,4 @@ st.markdown("""
         <p style='font-size:1.0em;'>Session ID: {}</p>
     </div>
 """.format(st.session_state["user_id"]), unsafe_allow_html=True)
+
