@@ -358,7 +358,8 @@ with col1:
                 rating = st.session_state.ratings.get(fav_key, 0)
 
                 st.markdown("""<div class='project-card'>""", unsafe_allow_html=True)
-                st.image(proj["image"], use_container_width=True)
+                --st.image(proj["image"], use_container_width=True)
+                st.image(proj["image"], width=700)
                 st.markdown(f"""
                 <div style="
                     width: 100%;
@@ -377,13 +378,7 @@ with col1:
                 """, unsafe_allow_html=True)
                 st.markdown(proj["description"])
                 st.markdown(f"[🔗 View Project]({proj['link']})")
-                st.markdown("""
-                            <style>
-                            [data-testid="stImage"] {
-                                min-width: 100% !important;
-                            }
-                            </style>
-                            """, unsafe_allow_html=True)  
+               
                 
 
                 selected = st.selectbox(
@@ -469,6 +464,7 @@ st.markdown("""
         <p style='font-size:1.0em;'>Session ID: {}</p>
     </div>
 """.format(st.session_state["user_id"]), unsafe_allow_html=True)
+
 
 
 
