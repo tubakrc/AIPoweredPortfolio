@@ -172,7 +172,6 @@ div[data-testid="stTextInput"] {
 /* Streamlit actual input field */
 div[data-testid="stTextInput"] input {
     width: 100% !important;
-    max-width: 1010px;
     padding: 12px;
     border-radius: 10px;
     border: none;
@@ -470,6 +469,7 @@ st.markdown("""
         <p style='font-size:1.0em;'>Session ID: {}</p>
     </div>
 """.format(st.session_state["user_id"]), unsafe_allow_html=True)
+
 
 
 
