@@ -377,6 +377,14 @@ with col1:
                 """, unsafe_allow_html=True)
                 st.markdown(proj["description"])
                 st.markdown(f"[🔗 View Project]({proj['link']})")
+                st.markdown("""
+                            <style>
+                            [data-testid="stImage"] {
+                                min-width: 250px !important;
+                            }
+                            </style>
+                            """, unsafe_allow_html=True)  
+                
 
                 selected = st.selectbox(
                     "⭐ Rate this project:",
@@ -461,4 +469,5 @@ st.markdown("""
         <p style='font-size:1.0em;'>Session ID: {}</p>
     </div>
 """.format(st.session_state["user_id"]), unsafe_allow_html=True)
+
 
