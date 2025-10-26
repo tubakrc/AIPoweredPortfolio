@@ -359,7 +359,7 @@ with col1:
 
                 st.markdown("""<div class='project-card'>""", unsafe_allow_html=True)
               
-                st.image(proj["image"], width=1040)
+                st.image(proj["image"], width=1500)
                 st.markdown(f"""
                 <div style="
                     width: 100%;
@@ -464,6 +464,7 @@ st.markdown("""
         <p style='font-size:1.0em;'>Session ID: {}</p>
     </div>
 """.format(st.session_state["user_id"]), unsafe_allow_html=True)
+
 
 
 
