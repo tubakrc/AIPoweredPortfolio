@@ -380,7 +380,7 @@ with col1:
                 st.markdown("""
                             <style>
                             [data-testid="stImage"] {
-                                min-width: 400px !important;
+                                min-width: 1010px !important;
                             }
                             </style>
                             """, unsafe_allow_html=True)  
@@ -469,6 +469,7 @@ st.markdown("""
         <p style='font-size:1.0em;'>Session ID: {}</p>
     </div>
 """.format(st.session_state["user_id"]), unsafe_allow_html=True)
+
 
 
 
